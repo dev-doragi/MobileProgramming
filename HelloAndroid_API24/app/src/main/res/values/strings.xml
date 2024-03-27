@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HelloAndroid_API 24</string>
+    <string name="greet_msg">Hello World!</string>
+    <string name="inform">202035249 컴퓨터공학과\n 최재인</string>
+</resources>
