@@ -26,13 +26,10 @@ class MainActivity : AppCompatActivity() {
         tv3 = findViewById<TextView>(R.id.textView3)
 
         tv1.setText("안녕하세요?")
-//        tv1.setTextColor(Color.RED)
-        tv1.setTextColor(ContextCompat.getColor(this, R.color.BLUE))
-        val textColor = ContextCompat.getColor(this, R.color.BLUE)
-        Log.d("MainActivity", "TextColor: $tv1.getColor") // 로그로 색상 값 확인
-        tv1.setTextColor(textColor)
+        tv1.setTextColor(Color.RED)
+//        tv1.setTextColor(ContextCompat.getColor(this, R.color.RED))
 
-        tv1.setTextSize(45.0f)
+        tv1.setTextSize(20.0f)
 
         tv2.setTextSize(45.0f)
         tv2.setTypeface(android.graphics.Typeface.SERIF,
