@@ -36,6 +36,6 @@ class MainActivity : AppCompatActivity() {
                         android.graphics.Typeface.BOLD_ITALIC)
         tv3.setText("가나다라마바사아자차카타파하가나다라마바사아자차카타파하")
         tv3.setTextSize(20.0f)
-        tv3.setSingleLine()
+//        tv3.setSingleLine()
     }
 }
