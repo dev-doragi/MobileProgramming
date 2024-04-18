@@ -13,87 +13,92 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="16dp">
 
         <EditText
             android:id="@+id/Edit1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginBottom="16dp"
             android:hint="숫자1" />
 
         <EditText
             android:id="@+id/Edit2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginBottom="16dp"
             android:hint="숫자2" />
 
-        <android.widget.Button
+        <Button
             android:id="@+id/BtnAdd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:hint="더하기" />
+            android:layout_marginBottom="16dp"
+            android:text="더하기"
+            android:textColor="#87CEEB"
+            android:backgroundTint="#00BFFF"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="24dp"
+            android:textAllCaps="false"/>
 
-        <android.widget.Button
+        <Button
             android:id="@+id/BtnSub"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:hint="빼기" />
+            android:layout_marginBottom="16dp"
+            android:text="빼기"
+            android:textColor="#87CEEB"
+            android:backgroundTint="#00BFFF"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="24dp"
+            android:textAllCaps="false"/>
 
-        <android.widget.Button
+        <Button
             android:id="@+id/BtnMul"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:hint="곱하기" />
+            android:layout_marginBottom="16dp"
+            android:text="곱하기"
+            android:textColor="#87CEEB"
+            android:backgroundTint="#00BFFF"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="24dp"
+            android:textAllCaps="false"/>
 
-        <android.widget.Button
+        <Button
             android:id="@+id/BtnDiv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:hint="나누기" />
+            android:layout_marginBottom="16dp"
+            android:text="나누기"
+            android:textColor="#87CEEB"
+            android:backgroundTint="#00BFFF"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="24dp"
+            android:textAllCaps="false"/>
 
-        <android.widget.Button
+        <Button
             android:id="@+id/BtnPow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:hint="제곱" />
+            android:layout_marginBottom="16dp"
+            android:text="제곱"
+            android:textColor="#87CEEB"
+            android:backgroundTint="#00BFFF"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="24dp"
+            android:textAllCaps="false"/>
 
         <TextView
             android:id="@+id/TextResult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30dp"
+            android:textSize="24sp"
             android:textColor="#FF0000"
-            android:layout_margin="10dp"
+            android:layout_marginBottom="16dp"
             android:text="계산 결과: " />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/android"
-            android:text="안드로이드폰"
-            android:checked="true"/>
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/iphone"
-            android:text="아이폰" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/window"
-            android:text="윈도우폰"
-            android:checked="true"/>
 
     </LinearLayout>
 
 </ScrollView>
-

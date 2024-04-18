@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.widget.Button
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="200px"
+        android:backgroundTint="#D716A18C"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:text="위쪽" />
+
+    <android.widget.Button
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="200px"
+        android:backgroundTint="#D716A1A1"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:text="왼쪽" />
+
+    <android.widget.Button
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="200px"
+        android:backgroundTint="#D716A1A1"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:text="오른쪽" />
+
+    <android.widget.Button
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="200px"
+        android:backgroundTint="#D716A1A1"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:text="가운데" />
+
+    <android.widget.Button
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="200px"
+        android:backgroundTint="#D716A1A1"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:text="아래쪽" />
+
+</RelativeLayout>
