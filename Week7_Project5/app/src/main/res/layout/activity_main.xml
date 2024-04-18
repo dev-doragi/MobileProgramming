@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="80dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:baselineAligned="false">
+
+        <android.widget.Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="#D716A18C"
+            android:textColor="@color/white"
+            android:text="버튼1" />
+
+        <android.widget.Button
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:backgroundTint="#D716A1A1"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="버튼2" />
+
+        <android.widget.Button
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:backgroundTint="#D71695A1"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:text="버튼3" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding = "10dp"
+        android:baselineAligned="true">
+
+        <TextView
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:background="#C84040"
+            android:layout_marginRight="10dp"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:text="글자1" />
+
+        <TextView
+            android:layout_width="300px"
+            android:layout_height="300px"
+            android:background="#B38452"
+            android:layout_marginRight="10dp"
+            android:textSize="36sp"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:text="글자2" />
+
+        <TextView
+            android:layout_width="400px"
+            android:layout_height="400px"
+            android:background="#DAC040"
+            android:layout_marginRight="10dp"
+            android:textSize="48sp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:text="글자3" />
+
+    </LinearLayout>
+</LinearLayout>
+

@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
     internal var result : Int? = null
     internal var numButtons = ArrayList<Button>(10)
     internal var numBtnIDs = arrayOf(R.id.BtnNum0, R.id.BtnNum1, R.id.BtnNum2, R.id.BtnNum3, R.id.BtnNum4,
-        R.id.BtnNum5, R.id.BtnNum6, R.id.BtnNum7, R.id.BtnNum8, R.id.BtnNum9,)
+        R.id.BtnNum5, R.id.BtnNum6, R.id.BtnNum7, R.id.BtnNum8, R.id.BtnNum9)
     internal var I : Int = 0 // 증가 값 용도
 
 
@@ -32,6 +32,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+        supportActionBar?.setIcon(R.drawable.onion_black)
 
         title = "테이블레이아웃 계산기"
 
@@ -93,12 +95,6 @@ class MainActivity : AppCompatActivity() {
                             "먼저 에디트 텍스트를 선택하세요.", Toast.LENGTH_SHORT).show()
                 }
             }
-        }
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
         }
     }
 }

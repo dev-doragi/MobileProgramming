@@ -15,14 +15,24 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         //setContentView(R.layout.activity_main)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+        supportActionBar?.setIcon(R.drawable.onion_black)
+
+        title = "Project5_1"
 
         val params = LinearLayout.LayoutParams(
-                     LinearLayout.LayoutParams.MATCH_PARENT,
-                     LinearLayout.LayoutParams.MATCH_PARENT)
+            LinearLayout.LayoutParams.MATCH_PARENT,
+            LinearLayout.LayoutParams.MATCH_PARENT)
 
         val baseLayout = LinearLayout(this)
         baseLayout.orientation = LinearLayout.VERTICAL
         baseLayout.setBackgroundColor(Color.rgb(0, 255, 0))
+
+        // 액션바의 높이 가져오기
+        val actionBarHeight = supportActionBar?.height ?: 0
+
+        params.setMargins(0, actionBarHeight + 240, 0, 0)
+
         setContentView(baseLayout, params)
 
         val btn = Button(this)
