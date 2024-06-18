@@ -34,8 +34,8 @@ class MainActivity : AppCompatActivity() {
         myPicture = findViewById<myPictureView>(R.id.myPictureView1)
 
         imageFiles = File(Environment.getExternalStorageDirectory().absolutePath + "/Pictures").listFiles()
-        // imageFname = imageFiles!![1].toString()
-        imageFname = imageFiles!![1].toString()
+        // imageFname = imageFiles!![0]은 /Pictures 디렉토리 내에 있는 .thumbnails 디렉토리이다.
+        imageFname = imageFiles!![1].toString() // imageFiles배열의 1번째 사진의 이름을 추출하고 문자열로 변환하여 imageFname에 저장
         myPicture.imagePath = imageFname
 
         btnPrev.setOnClickListener {
@@ -43,15 +43,15 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext, "첫번째 그림입니다.", Toast.LENGTH_SHORT).show()
             } else {
                 curNum--
-                imageFname = imageFiles!![curNum].toString()
+                imageFname = imageFiles!![curNum].toString() // 현재 curNum을 인덱스로 imageFiles
                 myPicture.imagePath = imageFname
                 myPicture.invalidate()
             }
         }
 
         btnNext.setOnClickListener {
-            // if (curNum >= 9) { //index 값을 그림의 수 만큼 걸어서, 한번 더 누르면 종류!
-            if (curNum >= imageFiles!!.size -1) { // 그림 수 보다 하나 더 들어오게 된다...
+            // if (curNum >= 9) { //index 값을 그림의 수 만큼 걸어서, 한번 더 누르면 종료!
+            if (curNum >= imageFiles!!.size -1) { // imageFiles 배열의 크기 - 1 = 배열의 마지막 인덱스
                 Toast.makeText(applicationContext, "마지막 그림입니다.", Toast.LENGTH_SHORT).show()
             } else {
                 curNum++

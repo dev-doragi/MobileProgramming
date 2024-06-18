@@ -68,19 +68,29 @@ class MainActivity : AppCompatActivity() {
     ) {
         super.onCreateContextMenu(menu, v, menuInfo)
 
+//         var mInflater = this.menuInflater
+//         if (v === button1) {
+//             menu!!.setHeaderTitle("배경 색 변경")
+//             mInflater.inflate(R.menu.menu1, menu) // menu1 xml 파일을 메뉴로 등록
+//         }
+
+
         if (v === button1) {
+            menu!!.setHeaderTitle("버튼 색 변경")
             menu!!.add(0,1,0, "버튼색 (빨강)")
             menu!!.add(0,2,0, "버튼색 (초록)")
             menu!!.add(0,3,0, "버튼색 (파랑)")
         }
 
         if (v === button2) {
+            menu!!.setHeaderTitle("배경 색 변경")
             menu!!.add(0,4,0, "배경색 (빨강)")
             menu!!.add(0,5,0, "배경색 (초록)")
             menu!!.add(0,6,0, "배경색 (파랑)")
         }
 
         if (v === button3) {
+            menu!!.setHeaderTitle("버튼 상태 변경")
             menu!!.add(0,7,0, "버튼 45도 회전")
             menu!!.add(0,8,0, "버튼 2배 확대")
         }

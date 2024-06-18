@@ -56,12 +56,14 @@ class MainActivity : AppCompatActivity(), ActionBar.TabListener{
 
         // 만약 myFrags 배열의 해당 위치가 비어있다면, 프래그먼트를 생성하여 넣는다.
         if (myFrags[tab.position] == null) {
-            myTabFrag = MyTabFragment()
+            myTabFrag = MyTabFragment() // 객체 생성
             // 안드로이드에서는 액티비티간에 데이터를 주고받을 때, Bundle 클래스를 활용한다.
             // 키-값 쌍의 데이터를 담을 수 있는 객체
             val data = Bundle()
+
             // data 번들에 tabName(해당 탭의 문자열 값)에 해당하는 key 값을 저장
             data.putString("tabName", tab.text.toString())
+
             // 프래그먼트에 해당 번들을 전달
             myTabFrag.arguments = data
             myFrags[tab.position] = myTabFrag

@@ -29,11 +29,11 @@ class MainActivity : AppCompatActivity() {
         button1 = findViewById<Button>(R.id.button1)
 
         // 원상복귀 버튼
-        button1.setOnTouchListener { view, motionEvent ->
+        button1.setOnClickListener {
             baseLayout.setBackgroundColor(Color.WHITE)
             button1.rotation = 0f
             button1.scaleX = 1f
-            false
+            button1.scaleY = 1f
         }
 
         // 액션 바 밑으로 레이아웃을 정렬시켜준다.
@@ -47,66 +47,67 @@ class MainActivity : AppCompatActivity() {
     // 옵션 메뉴
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         super.onCreateOptionsMenu(menu)
-        var mInflater = menuInflater
-        mInflater.inflate(R.menu.menu1, menu)
+//        var mInflater = menuInflater // 메뉴 인플레이터 생성
+//        mInflater.inflate(R.menu.menu1, menu) // 메뉴 인플레이터에 menu1 xml 파일을 등록
 
-//        menu!!.add(0, 1, 0, "배경색 (빨강)")
-//        menu!!.add(0, 2, 0, "배경색 (초록)")
-//        menu!!.add(0, 3, 0, "배경색 (파랑)")
-//
-//        var sMenu : SubMenu = menu.addSubMenu("버튼 변경 >>")
-//        sMenu.add(0, 4, 0, "버튼 45도 회전")
-//        sMenu.add(0, 5, 0, "버튼 2배 확대")
+        menu!!.add(0, 1, 0, "배경색 (빨강)")
+        menu!!.add(0, 2, 0, "배경색 (초록)")
+        menu!!.add(0, 3, 0, "배경색 (파랑)")
+
+        var sMenu : SubMenu = menu.addSubMenu("버튼 변경 >>")
+        sMenu.add(0, 4, 0, "버튼 45도 회전")
+        sMenu.add(0, 5, 0, "버튼 2배 확대")
 
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        when (item.itemId) {
-//            1 -> {
-//                baseLayout.setBackgroundColor(Color.RED)
-//                return true
-//            }
-//            2 -> {
-//                baseLayout.setBackgroundColor(Color.GREEN)
-//                return true
-//            }
-//            3 -> {
-//                baseLayout.setBackgroundColor(Color.BLUE)
-//                return true
-//            }
-//            4 -> {
-//                button1.rotation += 45f
-//                return true
-//            }
-//            5 -> {
-//                button1.scaleX *= 2f
-//                return true
-//            }
-//        }
-
         when (item.itemId) {
-            R.id.itemRed -> {
+            1 -> {
                 baseLayout.setBackgroundColor(Color.RED)
                 return true
             }
-            R.id.itemGreen -> {
+            2 -> {
                 baseLayout.setBackgroundColor(Color.GREEN)
                 return true
             }
-            R.id.itemBlue -> {
+            3 -> {
                 baseLayout.setBackgroundColor(Color.BLUE)
                 return true
             }
-            R.id.subRotate -> {
-                button1.rotation = 45f
+            4 -> {
+                button1.rotation += 45f
                 return true
             }
-            R.id.subSize -> {
-                button1.scaleX = 2f
+            5 -> {
+                button1.scaleX *= 2f
                 return true
             }
         }
+
+//        when (item.itemId) {
+//            R.id.itemRed -> {
+//                baseLayout.setBackgroundColor(Color.RED)
+//                return true
+//            }
+//            R.id.itemGreen -> {
+//                baseLayout.setBackgroundColor(Color.GREEN)
+//                return true
+//            }
+//            R.id.itemBlue -> {
+//                baseLayout.setBackgroundColor(Color.BLUE)
+//                return true
+//            }
+//            R.id.subRotate -> {
+//                button1.rotation += 45f
+//                return true
+//            }
+//            R.id.subSize -> {
+//                button1.scaleX *= 2f
+//                button1.scaleY *= 2f
+//                return true
+//            }
+//        }
         return false
     }
 

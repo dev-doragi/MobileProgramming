@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:stretchColumns="0" >
+
+    <TableRow>
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_gravity="center_vertical"
+            android:text="그림 1"
+            android:textSize="20dp" />
+        <RatingBar
+            android:id="@+id/rbar1"
+            style="?android:attr/ratingBarStyleIndicator"
+            android:layout_gravity="right" >
+        </RatingBar>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_gravity="center_vertical"
+            android:text="그림 2"
+            android:textSize="20dp" />
+        <RatingBar
+            android:id="@+id/rbar2"
+            style="?android:attr/ratingBarStyleIndicator"
+            android:layout_gravity="right" >
+        </RatingBar>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_gravity="center_vertical"
+            android:text="그림 3"
+            android:textSize="20dp" />
+        <RatingBar
+            android:id="@+id/rbar3"
+            style="?android:attr/ratingBarStyleIndicator"
+            android:layout_gravity="right" >
+        </RatingBar>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_gravity="center_vertical"
+            android:text="그림 4"
+            android:textSize="20dp" />
+        <RatingBar
+            android:id="@+id/rbar4"
+            style="?android:attr/ratingBarStyleIndicator"
+            android:layout_gravity="right" >
+        </RatingBar>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:id="@+id/tv5"
+            android:layout_gravity="center_vertical"
+            android:text="그림 5"
+            android:textSize="20dp" />
+        <RatingBar
+            android:id="@+id/rbar5"
+            style="?android:attr/ratingBarStyleIndicator"
+            android:layout_gravity="right" >
+        </RatingBar>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:id="@+id/tv6"
+            android:layout_gravity="center_vertical"
+            android:text="그림 6"
+            android:textSize="20dp" />
+        <RatingBar
+            android:id="@+id/rbar6"
+            style="?android:attr/ratingBarStyleIndicator"
+            android:layout_gravity="right" >
+        </RatingBar>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:id="@+id/tv7"
+            android:layout_gravity="center_vertical"
+            android:text="그림 7"
+            android:textSize="20dp" />
+        <RatingBar
+            android:id="@+id/rbar7"
+            style="?android:attr/ratingBarStyleIndicator"
+            android:layout_gravity="right" >
+        </RatingBar>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:id="@+id/tv8"
+            android:layout_gravity="center_vertical"
+            android:text="그림 8"
+            android:textSize="20dp" />
+        <RatingBar
+            android:id="@+id/rbar8"
+            style="?android:attr/ratingBarStyleIndicator"
+            android:layout_gravity="right" >
+        </RatingBar>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:id="@+id/tv9"
+            android:layout_gravity="center_vertical"
+            android:text="그림 9"
+            android:textSize="20dp" />
+        <RatingBar
+            android:id="@+id/rbar9"
+            style="?android:attr/ratingBarStyleIndicator"
+            android:layout_gravity="right" >
+        </RatingBar>
+    </TableRow>
+
+    <TableRow>
+        <android.widget.Button
+            android:id="@+id/btnReturn"
+            android:layout_span="2"
+            android:text="돌아가기" />
+    </TableRow>
+
+</TableLayout>

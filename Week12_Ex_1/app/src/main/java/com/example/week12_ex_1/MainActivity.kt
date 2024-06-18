@@ -19,17 +19,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         supportActionBar?.setDisplayShowHomeEnabled(true)
         supportActionBar?.setIcon(R.drawable.onion_black)
+        title = "파일 읽기 실습"
 
         var btnRead: Button = findViewById<Button>(R.id.btnRead)
         var btnWrite: Button = findViewById<Button>(R.id.btnWirte)
 
         // 파일 Write
         btnWrite.setOnClickListener {
+            // outFs 파일 아웃풋 스트림 -> 파일 쓰기
             var outFs : FileOutputStream =
-                openFileOutput("file.txt", Context.MODE_PRIVATE)
-            var str = "앙 기모띠"
-            outFs.write(str.toByteArray())
-            outFs.close()
+                openFileOutput("file.txt", Context.MODE_PRIVATE) // Context.MODE_PRIVATE -> 다른 앱은 접근 불가
+            var str = "파일 읽기 실습"
+            outFs.write(str.toByteArray()) // str을 바이트 배열로 변환 후 outFs에 쓰기
+            outFs.close() // 파일 스트림 닫기
             Toast.makeText(applicationContext, "file.txt가 생성됨", Toast.LENGTH_SHORT).show()
         }
 
@@ -37,9 +39,9 @@ class MainActivity : AppCompatActivity() {
         btnRead.setOnClickListener {
             try {
                 var inFs : FileInputStream = openFileInput("file.txt")
-                var txt = ByteArray(30)
-                inFs.read(txt)
-                var str = txt.toString(Charsets.UTF_8)
+                var txt = ByteArray(30) // file.txt의 바이트 배열을 저장할 변수 txt
+                inFs.read(txt) // inFs에서 txt의 크기만큼 데이터를 읽는다.
+                var str = txt.toString(Charsets.UTF_8) // UTF-8로 txt를 문자열로 변환하여 str에 저장
                 Toast.makeText(applicationContext, str, Toast.LENGTH_SHORT).show()
                 inFs.close()
             } catch (e : IOException) {

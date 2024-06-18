@@ -21,8 +21,11 @@ class MainActivity : AppCompatActivity() {
         btnRead = findViewById<Button>(R.id.btnRead)
         edtRaw = findViewById<EditText>(R.id.edtRaw)
 
+        // 읽기 메서드
         btnRead.setOnClickListener {
-            var inputS = resources.openRawResource(R.raw.raw_test)
+            // 현재 패키지의 리소스를 의미하는 resources, /res/raw 리소스 raw_test를 읽기용으로 오픈
+            var inputS = resources.openRawResource(R.raw.raw_test) // file과 다르게 openRawResource 메서드이다. InputStream을 반환한다. (File은 openFileInput 메서드, FileInputStream 반환)
+            // 입력 스트림에서 읽을 수 있는 바이트 수를 반환한다. txt라는 배열을 만들고, 크기는 inputS(raw_test.txt)의 데이터 크기가 된다.
             var txt = ByteArray(inputS.available())
             inputS.read(txt)
             edtRaw.setText(txt.toString(Charsets.UTF_8))

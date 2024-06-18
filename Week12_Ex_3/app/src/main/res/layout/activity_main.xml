@@ -19,6 +19,12 @@
             android:id="@+id/btnRead"
             android:text="SD 카드에서 파일 읽기" />
 
+        <android.widget.Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnWrite"
+            android:text="SD 카드에서 파일 쓰기" />
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

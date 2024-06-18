@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
                 toastView1 = View.inflate(this@MainActivity, R.layout.toast1, null)
                 toastText = toastView1 .findViewById<TextView>(R.id.toastText1)
                 toastText.text = "모스!"
-                toast.view = toastView1
+                toast.view = toastView1 // toast2.xml의 내용이 토스트로 나타남
                 toast.show()
             }
 
